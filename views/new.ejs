@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/5.0.1/autosize.js"
+      integrity="sha512-obXEX2lJVopusJtpNm4cIEp9rnEpoRM44PXFHyVYYrhKbGWLUpPPdeko+gZx5s4kJsQVHXQhvcpqZcL/0yYuhA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Notebin</title>
+  </head>
+  <body>
+    <form action="/save" method="POST">
+      <%- include("_buttons.ejs") %>
+      <div class="wrapper">
+        <div id="line-numbers">&gt;</div>
+        <textarea autofocus name="value"><%= locals.value%> </textarea>
+      </div>
+    </form>
+    <script>
+      autosize(document.querySelector("textarea"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<div class="buttons-wrapper">
+  <a href="/" class="logo">Notebin</a>
+  <div class="action-buttons">
+    <a class="button" href="/new">New</a>
+    <% if (locals.canSave) {%>
+    <button class="button" type="submit">Save</button> <%} %>
+  </div>
+</div>
